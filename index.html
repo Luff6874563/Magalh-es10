@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mihawk</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <style>
+        /* Estilos para o carrinho */
+        #carrinho {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+        #carrinho ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #carrinho li {
+            margin-bottom: 5px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <h1 id="h1-header">Mihawk</h1>
+    <h3 class='header'>A melhor loja de informática</h3>
+    <nav id='navegação'>
+        <a class='link-cabeçalho' href='#'> Processadores </a>
+        <a class='link-cabeçalho' href='#'> Placa de vídeo </a>
+        <a class='link-cabeçalho' href='#'> Celulares </a>
+        <a class='link-cabeçalho' href='#'> Monitores </a>
+    </nav>
+</header>
+
+<br>
+<br>
+<br>
+
+<section class='section-1'>
+    <h2> Promoções </h2>
+    <p> Cobrimos qualquer oferta.</p>
+    <p> Aproveite.</p>
+</section>
+
+<section class='section-2'>
+    <input type="text" id="search-bar" placeholder="Pesquisar...">
+    <button onclick="pesquisar()">Pesquisar</button>
+</section>
+
+<section class="section-2" id="section-grid">
+    <main>
+        <section class="grid">
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\processador-intel-1151-i5-9400f-29-9m-g9-sem-video-50352-2000-201840-1-1536x1536.jpg" alt="Descrição da imagem" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2>Intel i5 </h2>
+                <button onclick="adicionarAoCarrinho('Intel i5', 1200)">Comprar</button>
+            </div>
+            
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\OIP.jpeg" alt="Descrição da imagem" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2>Ryzen 5</h2>
+                <button onclick="adicionarAoCarrinho('Ryzen 5', 1200)">Comprar</button>
+            </div>
+            
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\OIP (1).jpeg" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2> AMD Radeon </h2>
+                <button onclick="adicionarAoCarrinho('AMD Radeon', 1200)">Comprar</button>
+            </div>
+            
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\GeForce-RTX-4070-SUPER-Image.jpg" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2> GEFORCE </h2>
+                <button onclick="adicionarAoCarrinho('GEFORCE', 1200)">Comprar</button>
+            </div>
+            
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\OIP (4).jpeg" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2>MOTOROLA EDGE </h2>
+                <button onclick="adicionarAoCarrinho('MOTOROLA EDGE', 1200)">Comprar</button>
+            </div>
+            
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\R.jpeg" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2>MOTOROLA G31</h2>
+                <button onclick="adicionarAoCarrinho('MOTOROLA G31', 1200)">Comprar</button>
+            </div>
+            
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\OIP (2).jpeg" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2>Monitor ACER</h2>
+                <button onclick="adicionarAoCarrinho('Monitor ACER', 1200)">Comprar</button>
+            </div>
+            
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\OIP (3).jpeg" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2>Monitor ASUS</h2>
+                <button onclick="adicionarAoCarrinho('Monitor ASUS', 1200)">Comprar</button>
+            </div>
+        </section>
+    </main>
+</section>
+
+<div id="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <ul id="carrinho-items">
+        <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+    </ul>
+    <p id="total">Total: R$ 0,00</p>
+</div>
+
+<script>
+    // Função para adicionar itens ao carrinho
+    function adicionarAoCarrinho(item, preco) {
+        const carrinho = document.getElementById('carrinho-items');
+        const totalElement = document.getElementById('total');
+        
+        // Criar novo item do carrinho
+        const li = document.createElement('li');
+        li.textContent = `${item} - R$ ${preco.toFixed(2)}`;
+        carrinho.appendChild(li);
+        
+        // Atualizar total
+        let total = parseFloat(totalElement.textContent.replace('Total: R$ ', ''));
+        total += preco;
+        totalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
+    }
+
+    function pesquisar() {
+        const termo = document.getElementById('search-bar').value;
+        destacarItens(termo);
+    }
+
+    function destacarItens(termo) {
+        const itens = document.querySelectorAll('.item h2');
+        itens.forEach(item => {
+            const textoOriginal = item.textContent;
+            const regex = new RegExp(termo, 'gi');
+            const novoTexto = textoOriginal.replace(regex, match => `<span class="highlight">${match}</span>`);
+            item.innerHTML = novoTexto;
+        });
+    }
+</script>
+
+</body>
+</html>

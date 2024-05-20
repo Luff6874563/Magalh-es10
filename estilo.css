@@ -1,0 +1,298 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+#header {
+    background-color: blueviolet;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    z-index: 1;
+}
+
+#h1-header {
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    padding-left: 5px;
+    padding-top: 3px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    color: #fff;
+    font-size: times new roman;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+.link-cabeçalho {
+    text-decoration: none;
+    color: #fff;
+    word-spacing: 6px;
+    font-size: 19px;
+    font-family: times new roman;
+}
+
+#navegação {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.section-1 {
+    background-color: blueviolet;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: 150px;
+    border-radius: 13px;
+    color: #fff;
+}
+
+.section-1 {
+    font-family: times new roman;
+    font-size: 20px;
+    padding-top: 27px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #EE82EE;
+}
+
+header {
+    background-color: blueviolet;
+    padding: 20px;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.item button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background-color: darkviolet;
+}
+
+.link-cabeçalho{
+    font-weight: bold;
+    font-family: arial;
+}
+<style>
+    .highlight {
+        background-color: yellow;
+    }
+</style>
+#mostrar-carrinhos {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 999; /* Garante que o botão esteja na frente de outros elementos */
+}
+
+#mostrar-carrinhos:hover {
+    background-color: darkviolet;
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mihawk</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <style>
+        /* Estilos para o carrinho */
+        #carrinho {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 999;
+            width: 250px; /* Ajuste a largura conforme necessário */
+        }
+        #carrinho h2 {
+            margin-bottom: 10px;
+        }
+        #carrinho #save-button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #carrinho #save-button:hover {
+            background-color: darkviolet;
+        }
+        #carrinho ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        #carrinho li {
+            margin-bottom: 5px;
+        }
+        #total {
+            font-weight: bold;
+        }
+        #mostrar-carrinhos {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 999; /* Garante que o botão esteja na frente de outros elementos */
+        }
+        #mostrar-carrinhos:hover {
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <h1 id="h1-header">Mihawk</h1>
+    <h3 class='header'>A melhor loja de informática</h3>
+    <nav id='navegação'>
+        <a class='link-cabeçalho' href='#'> Processadores </a>
+        <a class='link-cabeçalho' href='#'> Placa de vídeo </a>
+        <a class='link-cabeçalho' href='#'> Celulares </a>
+        <a class='link-cabeçalho' href='#'> Monitores </a>
+    </nav>
+</header>
+
+<br>
+<br>
+<br>
+
+<section class='section-1'>
+    <h2> Promoções </h2>
+    <p> Cobrimos qualquer oferta.</p>
+    <p> Aproveite.</p>
+</section>
+
+<section class="section-2" id="section-grid">
+    <main>
+        <section class="grid">
+            <div class="item">
+                <img src="C:\Users\rafae\OneDrive\Área de Trabalho\techmail\Imagens\processador-intel-1151-i5-9400f-29-9m-g9-sem-video-50352-2000-201840-1-1536x1536.jpg" alt="Descrição da imagem" width="200" height="100">
+                <p>Preço: R$ 1.200,00</p>
+                <h2>Intel i5 </h2>
+                <button onclick="adicionarAoCarrinho('Intel i5', 1200)">Comprar</button>
+            </div>
+            
+            <!-- Adicione mais itens aqui -->
+
+        </section>
+    </main>
+</section>
+
+<div id="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <button id="save-button" onclick="salvarCarrinho()">Salvar Carrinho</button>
+    <ul id="carrinho-items">
+        <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+    </ul>
+    <p id="total">Total: R$ 0,00</p>
+</div>
+
+<button id="mostrar-carrinhos"
+<button id="mostrar-carrinhos">Mostrar Carrinhos Salvos</button>
+
+<script>
+    // Função para adicionar itens ao carrinho
+    function adicionarAoCarrinho(item, preco) {
+        const carrinho = document.getElementById('carrinho-items');
+        const totalElement = document.getElementById('total');
+        
+        // Criar novo item do carrinho
+        const li = document.createElement('li');
+        li.textContent = `${item} - R$ ${preco.toFixed(2)}`;
+        carrinho.appendChild(li);
+        
+        // Atualizar total
+        let total = parseFloat(totalElement.textContent.replace('Total: R$ ', ''));
+        total += preco;
+        totalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
+    }
+
+    // Função para salvar o carrinho
+    function salvarCarrinho() {
+        // Lógica para salvar o carrinho
+        alert("Carrinho salvo com sucesso!");
+    }
+</script>
+
+</body>
+</html>
